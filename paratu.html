@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador de Amor 💘</title>
+</head>
+<body style="text-align:center; font-family:sans-serif;">
+
+<h1>Desde que somos novios 💘</h1>
+<p id="contador"></p>
+
+<script>
+  let inicio = new Date("2025-07-20"); // FECHA DE INICIO DE NOVIOS
+
+  function actualizar() {
+    let ahora = new Date();
+    let diff = ahora - inicio;
+
+    let dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+    document.getElementById("contador").innerText =
+      dias + " días siendo novios 💘";
+  }
+
+  setInterval(actualizar, 1000);
+</script>
+
+</body>
+</html>
